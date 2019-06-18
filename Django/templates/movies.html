@@ -1,0 +1,11 @@
+{%extends "index.html" %}
+{% block mainbody %}
+<h1>豆瓣前250部电影</h1>
+<div style="text-align:left">
+    <ol>
+        {% for movie in movies %}
+        <li><a href="{{movie.url}}">{{movie.name}}</a>&nbsp;{{movie.synopsis}}&nbsp;{{movie.time}}</li>   
+        {% endfor %}
+    </ol>    
+</div>
+{% endblock %}

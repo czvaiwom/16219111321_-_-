@@ -1,0 +1,26 @@
+{%extends "index.html" %}
+{% block mainbody %}
+<h1>各地天气</h1>
+<table align="center">
+    <tr>
+        <th>&nbsp;所在位置&nbsp;</th>
+        <th>&nbsp;日期&nbsp;</th>
+        <th>&nbsp;风级&nbsp;</th>
+        <th>&nbsp;最低温度&nbsp;</th>
+        <th>&nbsp;最高温度&nbsp;</th>
+        <th>&nbsp;天气&nbsp;</th>
+    </tr>
+    <tr><td colspan="6"><hr align="center" size="1" color="black"></td></tr>
+    {% for weather in weathers %}
+    <tr>
+        <td>&nbsp;{{weather.city}}&nbsp;</td>
+        <td>&nbsp;{{weather.dates}}&nbsp;</td>
+        <td>&nbsp;{{weather.winL}}&nbsp;</td>
+        <td>&nbsp;{{weather.temperatureLow}}&nbsp;</td>
+        <td>&nbsp;{{weather.temperatureHigh}}&nbsp;</td>
+        <td>&nbsp;{{weather.weather}}&nbsp;</td>
+    </tr>
+    <tr><td colspan="6"><hr align="center" size="1" width="800"></td></tr>
+    {% endfor %}
+</table>
+{% endblock %}

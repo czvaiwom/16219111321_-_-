@@ -1,0 +1,9 @@
+{%extends "index.html" %}
+{% block mainbody %}
+<h1>京东手机</h1>
+<div style="text-align:left;margin-left: 10%">
+    {% for phone in phones %}
+    <p>价格:{{phone.price}}&nbsp;&nbsp;<a href="{{phone.url}}">{{phone.name}}</a> &nbsp;{{phone.time}}</p>
+    {% endfor %}
+</div>
+{% endblock %}
